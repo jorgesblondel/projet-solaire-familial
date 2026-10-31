@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07140f" />
+  <title>Projet Solaire Familial — Cameroun</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <nav><div class="brand">☀️ Projet Solaire Familial</div><a href="#simulateur">Simuler l’autonomie</a></nav>
+  <div class="hero-content">
+    <p class="eyebrow">ÉTUDE FAMILIALE · CAMEROUN</p>
+    <h1>Une maison alimentée par le soleil,<br><span>même quand ENEO coupe.</span></h1>
+    <p class="lead">Une étude simple et transparente pour comprendre, dimensionner et budgéter notre future installation solaire familiale.</p>
+    <div class="hero-stats">
+      <div><b>15</b><span>panneaux</span></div><div><b>500 W</b><span>par panneau</span></div><div><b>7,5 kWc</b><span>solaire installé</span></div><div><b>12 kW</b><span>onduleur envisagé</span></div>
+    </div>
+  </div>
+</header>
+<main>
+<section class="section intro">
+  <p class="eyebrow">COMPRENDRE LE SYSTÈME</p><h2>Qui fait quoi ?</h2>
+  <p class="section-lead">Pas besoin d’être électricien : l’installation fonctionne comme un système automatique à quatre éléments.</p>
+  <div class="cards four">
+    <article><div class="ico">☀️</div><h3>Panneaux</h3><p><b>Ils produisent.</b> Le jour, ils transforment le soleil en électricité.</p></article>
+    <article><div class="ico">⚡</div><h3>Onduleur</h3><p><b>Il dirige.</b> C’est le cerveau : il choisit automatiquement la meilleure source d’énergie.</p></article>
+    <article><div class="ico">🔋</div><h3>Batteries</h3><p><b>Elles stockent.</b> Le surplus du jour est conservé pour la nuit et les coupures.</p></article>
+    <article><div class="ico">🏠</div><h3>Maison</h3><p><b>Elle consomme.</b> Climatisations, frigos, congélateurs, TV, ventilateurs, pompe et éclairage.</p></article>
+  </div>
+</section>
+<section class="section dark">
+  <p class="eyebrow">FLUX D’ÉNERGIE</p><h2>Une journée dans la maison</h2>
+  <div class="flow">
+    <div class="node sun">☀️<b>7,5 kWc</b><small>Panneaux</small></div><div class="arrow">→</div><div class="node inverter">⚡<b>12 kW</b><small>Onduleur hybride</small></div><div class="arrow">→</div><div class="node house">🏠<b>Maison</b><small>Priorité</small></div>
+  </div>
+  <div class="scenarios">
+    <article><span>☀️ JOUR</span><h3>Le solaire alimente d’abord la maison</h3><p>Si les panneaux produisent plus que la maison ne consomme, le surplus recharge les batteries.</p></article>
+    <article><span>🌥️ NUAGE</span><h3>La batterie complète automatiquement</h3><p>Si le solaire ne suffit plus, la batterie fournit instantanément la différence.</p></article>
+    <article><span>🌙 NUIT</span><h3>Les batteries prennent le relais</h3><p>Sans soleil, l’énergie stockée alimente la maison. ENEO ou un groupe peut servir de secours.</p></article>
+  </div>
+</section>
+<section class="section">
+  <p class="eyebrow">BESOINS DE LA MAISON</p><h2>Ce que nous devons alimenter</h2>
+  <div class="appliances">
+    <div>❄️ <b>4</b><span>climatiseurs</span></div><div>🧊 <b>3</b><span>frigos</span></div><div>🧊 <b>2</b><span>congélateurs</span></div><div>🌀 <b>5</b><span>ventilateurs</span></div><div>📺 <b>3</b><span>TV</span></div><div>💡 <b>15</b><span>ampoules</span></div><div>💧 <b>1</b><span>pompe à eau</span></div>
+  </div>
+  <div class="notice">⚠️ <b>À vérifier :</b> la puissance exacte des climatiseurs et de la pompe déterminera le dimensionnement final. Les calculs actuels sont des estimations de travail.</div>
+</section>
+<section class="section pale" id="simulateur">
+  <p class="eyebrow">SIMULATEUR</p><h2>Combien de temps tiendra la batterie ?</h2>
+  <p class="section-lead">Choisissez une capacité et une consommation moyenne. Le résultat est indicatif et inclut une marge de 10 % pour les pertes.</p>
+  <div class="sim-grid">
+    <div class="controls">
+      <label>Capacité batterie <strong id="batteryLabel">28,7 kWh</strong></label>
+      <input id="battery" type="range" min="14.3" max="43" step="14.35" value="28.7">
+      <div class="ticks"><span>14,3</span><span>28,7</span><span>43 kWh</span></div>
+      <label>Consommation moyenne <strong id="loadLabel">3,0 kW</strong></label>
+      <input id="load" type="range" min="0.5" max="7" step="0.1" value="3">
+      <p class="hint">La consommation réelle dépend surtout du nombre de climatiseurs utilisés simultanément.</p>
+    </div>
+    <div class="result"><span>AUTONOMIE ESTIMÉE SANS SOLEIL</span><b id="hours">8 h 36</b><p id="resultText">avec 28,7 kWh de batterie et 3,0 kW de consommation moyenne.</p></div>
+  </div>
+</section>
+<section class="section">
+  <p class="eyebrow">SCÉNARIOS DE STOCKAGE</p><h2>Trois niveaux à comparer</h2>
+  <div class="cards three battery-cards">
+    <article><span class="tag">MINIMUM</span><h3>≈ 14 kWh</h3><div class="big">1 batterie</div><p>Solution économique, mais limitée si plusieurs climatiseurs fonctionnent la nuit.</p></article>
+    <article class="recommended"><span class="tag">BASE RECOMMANDÉE</span><h3>≈ 28–30 kWh</h3><div class="big">2 batteries</div><p>Notre scénario de référence actuel : beaucoup plus confortable pour une maison familiale.</p></article>
+    <article><span class="tag">CONFORT +</span><h3>≈ 40–43 kWh</h3><div class="big">3 batteries</div><p>Davantage de réserve pour les longues coupures et une utilisation nocturne plus intensive.</p></article>
+  </div>
+</section>
+<section class="section choice">
+  <div><p class="eyebrow">CONFIGURATION DE TRAVAIL</p><h2>Notre piste actuelle</h2><p>Une architecture robuste, évolutive et pensée pour les coupures réseau. Le modèle définitif sera validé après relevé des puissances des climatiseurs et de la pompe.</p></div>
+  <div class="specs"><div><span>Solaire</span><b>15 × 500 W</b></div><div><span>Production crête</span><b>7,5 kWc</b></div><div><span>Onduleur</span><b>Hybride 12 kW</b></div><div><span>Stockage cible</span><b>≈ 28–30 kWh</b></div><div><span>Secours</span><b>ENEO + groupe possible</b></div></div>
+</section>
+<section class="section roadmap">
+  <p class="eyebrow">PROCHAINES ÉTAPES</p><h2>Avant l’achat</h2>
+  <ol><li><b>Relever les plaques signalétiques</b><span>Climatiseurs + pompe à eau.</span></li><li><b>Calculer la consommation réelle</b><span>Jour, nuit et pics de démarrage.</span></li><li><b>Comparer le matériel</b><span>Onduleurs, batteries, garanties et compatibilités.</span></li><li><b>Établir le budget complet</b><span>Matériel, protections, câbles, transport et pose au Cameroun.</span></li></ol>
+</section>
+</main>
+<footer><b>☀️ Projet Solaire Familial</b><span>Étude évolutive · Cameroun · Les valeurs non vérifiées sont présentées comme estimations.</span></footer>
+<script src="app.js"></script>
+</body></html>
